@@ -363,173 +363,170 @@ enumerable: true
   * import * as add from ‘./add.js’
   * 다른 모듈에서 가져온 값들은 얕은 복사. 
 
-표준 내장 객체
-전역 스코프 안에 객체 참조
-내장 함수 객체
-표준 내장 객체중 함수처럼 호출 가능한 것
-new 지시자 통해 함수 형태로 호출
-typeof
-특정 원시 자료형 확인, 원시와 객체형 구분
-instanceof
-객체 확인
-isNaN
-isArray
-isInteger
-pareseInt
-문자열 to 숫자형 정수
-parseFloat
-trim
-문자열 양 끝 공백 없애기
-slice(시작 인덱스, 종료 인덱스)
-문자열 자르기
-음수 가능. 뒤에서부터
-substring(시작 인덱스, 종료 인덱스)
-문자열 자르기
-음수 불가
-substr(시작인덱스, 길이)
-문자열 자르기
-concat(str11…)
-문자열 합치기
-charAt(n)
-특정 위치 문자 반환
-indexOf(str)
-특정 문자열 위치 확인
-없으면 -1
-lastIndexOf(str)
-특정 문자열 위치 확인
-뒤에서부터
-includes(str)
-특정 문자열 포함 여부 확인
-toLowerCase, toUpperCase
-대소문자 변환
-from(배열로 변환될 값, 변환된 배열 내부 요소에 대한 callback 함수)
-배열 요소를 분할/변환하기
-split(str구분자)
-문자열을 특정 구분자에 의해 배열로 나누기
-push : 배열 뒤 요소 추가
-unshift : 배열 앞 요소 추가
-join(str 구분자) : 배열에 특정 구분자 넣어 문자열로 병합
-pop : 배열 마지막 요소 추출
-shift : 배열 맨 앞 요소 추출
-slice : 배열 특정 위치 요소 추출
-splice(시작 인덱스, 삭제할 요소 갯수, 추가될 요소들…) : 배열 인덱스로 특정 요소 수정
-forEach(callback함수) (배열 순환)
-arr.foreach((el) => {console.log(el.n ame);});
-sort(function a, b) {return 비교값}
-비교값 > 0 a가 b보다 앞에 위치 (작은인덱스) =0이면 위치변경안함
+* 표준 내장 객체
+  * 전역 스코프 안에 객체 참조
+* 내장 함수 객체
+  * 표준 내장 객체중 함수처럼 호출 가능한 것
+  * new 지시자 통해 함수 형태로 호출
+* typeof
+  * 특정 원시 자료형 확인, 원시와 객체형 구분
+* instanceof
+  * 객체 확인
+* isNaN
+* isArray
+* isInteger
+* pareseInt
+  * 문자열 to 숫자형 정수
+* parseFloat
+* trim
+  * 문자열 양 끝 공백 없애기
+* slice(시작 인덱스, 종료 인덱스)
+  * 문자열 자르기
+  * 음수 가능. 뒤에서부터
+* substring(시작 인덱스, 종료 인덱스)
+  * 문자열 자르기
+  * 음수 불가
+* substr(시작인덱스, 길이)
+  * 문자열 자르기
+* concat(str11…)
+  * 문자열 합치기
+* charAt(n)
+  * 특정 위치 문자 반환
+* indexOf(str)
+  * 특정 문자열 위치 확인
+  * 없으면 -1
+* lastIndexOf(str)
+  * 특정 문자열 위치 확인
+  * 뒤에서부터
+* includes(str)
+  * 특정 문자열 포함 여부 확인
+* toLowerCase, toUpperCase
+  * 대소문자 변환
+* from(배열로 변환될 값, 변환된 배열 내부 요소에 대한 callback 함수)
+* 배열 요소를 분할/변환하기
+  * split(str구분자)
+    * 문자열을 특정 구분자에 의해 배열로 나누기
+* push : 배열 뒤 요소 추가
+* unshift : 배열 앞 요소 추가
+* join(str 구분자) : 배열에 특정 구분자 넣어 문자열로 병합
+* pop : 배열 마지막 요소 추출
+* shift : 배열 맨 앞 요소 추출
+* slice : 배열 특정 위치 요소 추출
+* splice(시작 인덱스, 삭제할 요소 갯수, 추가될 요소들…) : 배열 인덱스로 특정 요소 수정
+* forEach(callback함수) (배열 순환)
+  * arr.foreach((el) => {console.log(el.n ame);});
+* sort(function a, b) {return 비교값}
+  * 비교값 > 0 a가 b보다 앞에 위치 (작은인덱스) =0이면 위치변경안함
 
-reverse() : 배열 순서 반대로 나열
-some(function return bool) : 배열 요소가 특정 요소 맞는지확인. 하나라도 있으면 true
-every : 모든 배열 요소가 특정 조건 만족하는지 확인
-filter(function return bool) : 배열의 특정 조건을 기준으로 필터링
-find : 배열의; 특정 조건을 충족하는 요소 찾기
-map : 배열 요소 일괄 변경. callback함수에 리턴값에 따라 반환되는 배열 값이 바뀜
-reduce(누적된 값, 현재 요소 값, 현재 인덱스, 원본 배열)
-배열요소를 순환하면서 누적
-배열 내 값을 누적시키기
-numArr.reduce((acc.el) => {return acc+el}, 0);
-중첩된 배열을 단일하게 만들기
-arr.reduce((acc,el) => {return add.concat(el);}, []);
-keys : 객체에서 키만 추출
-values : 객체에서 값만 추출
-entries : 객체를 배열로 [키:값] -> [키,값]
-freeze : 객체 변경되지 않도록
-seal : 객체에 속성 추가 못하게 (기존 속성은 변경가능)
-assign(반환될 객체, ...병합될 다른 객체들) : 객체 병합 확장
-진수 변환
-toString(2)
-pareInt(bin, 2)
-random() : 0,1사이 랜덤
-Math.random() * (max - min + 1) + min);
-round() 반올림
-round(val * 10) / 10 소수점 둘째자리 반올림
-round(val / 10) * 10 일의 자리 반올림
-Date객체
-getFullYear
-getMonth
-getDate
-Date.UTC()
-Math.floor((diff = diff / 1000) % 60); // 초 구하기, diff는 date2.getTime() - date1.getTime()
-JSON.parse(값, 리플레이서)
-정규표현식(regexp, regex) : / / 표현식. 일치하는 문자열 찾거나 반환. 일괄 치환
-search(str정규표현식) : 위치확인 (없으면 -1)
-match(str정규표현식) : 해당 값 반환
-test(str정규표현식) : 정규표현식에 맞으면 true
-str정규표현식.exec(str) : 정규표현식과 일치하는 문자열 반환
-배열로 반환 [1, index: , input: ]
-str.replace(교체 대상 문자열 또는 정규식, 대체될 문자열 또는 함수)
-반복 가능한 객체
-반복 가능한 규약
-반복자 규약 (iterator : 반복자 규약을 충족하는 객체)
-for-of
-문자열 순환
-next 호출 결과로 반환된 객체의 done속성이 true일때까지
-Map
-키와 값을 한 쌍. 중복키X, Key는 다양한 자료형 값 가능
-Object는 문자, Symbol자료형만 Key 가능
-Symbol.iterator가 기본적으로 정의
- Object는 없음
-get, set, has, delete, size
-keys, values, entries
-for-of, foreach : Map 객체 순환
-for(let key of map.keys())
-for(let value of map.values())
-for(let [key, value] of map)
-map.forEach((value, key) => {});
-Set
-값으로만 이루어짐, 중복값허용X
-add, delete, has, size
-new Set(array);
-keys, values, entries
-setTimeOut(function, 지연시간)
-setInterval(function, 1000) 1초마다 실행
-반환된 id값을통해 clearInterval(id)로 취소 가능
-Promise
-비동기 처리
-객체로서 언젠가 완료될 일(계산)
-대기중(Pending) : 아직 결과가 없음. 약속만 함
-이행됨(Fulfilled) : 비동기 처리가 성공적으로 완료하여 약속 이행. 결과로 하나의 값 전달
-거부됨(Rejected) : 비동기 처리 실패. 거절된 이유 전달
-then(onFulfilled, onReject) : 약속 완료시 호출될 함수 전달
-catch(onReject) : 약속 거부 시 호출될 함수 등록
-Promise 끼리의조합
-Async
-함수 안의 await구문과 함께 비동기 작업 제어
+* reverse() : 배열 순서 반대로 나열
+* some(function return bool) : 배열 요소가 특정 요소 맞는지확인. 하나라도 있으면 true
+* every : 모든 배열 요소가 특정 조건 만족하는지 확인
+* filter(function return bool) : 배열의 특정 조건을 기준으로 필터링
+* find : 배열의; 특정 조건을 충족하는 요소 찾기
+* map : 배열 요소 일괄 변경. callback함수에 리턴값에 따라 반환되는 배열 값이 바뀜
+* reduce(누적된 값, 현재 요소 값, 현재 인덱스, 원본 배열)
+  * 배열요소를 순환하면서 누적
+  * 배열 내 값을 누적시키기
+    * numArr.reduce((acc.el) => {return acc+el}, 0);
+  * 중첩된 배열을 단일하게 만들기
+    * arr.reduce((acc,el) => {return add.concat(el);}, []);
+* keys : 객체에서 키만 추출
+* values : 객체에서 값만 추출
+* entries : 객체를 배열로 [키:값] -> [키,값]
+* freeze : 객체 변경되지 않도록
+* seal : 객체에 속성 추가 못하게 (기존 속성은 변경가능)
+* assign(반환될 객체, ...병합될 다른 객체들) : 객체 병합 확장
+* 진수 변환
+  * toString(2)
+  * pareInt(bin, 2)
+* random() : 0,1사이 랜덤
+  * Math.random() * (max - min + 1) + min);
+* round() 반올림
+  * round(val * 10) / 10 소수점 둘째자리 반올림
+  * round(val / 10) * 10 일의 자리 반올림
+* Date객체
+  * getFullYear
+  * getMonth
+  * getDate
+  * Date.UTC()
+* Math.floor((diff = diff / 1000) % 60); // 초 구하기, diff는 date2.getTime() - date1.getTime()
+* JSON.parse(값, 리플레이서)
+* 정규표현식(regexp, regex) : / / 표현식. 일치하는 문자열 찾거나 반환. 일괄 치환
+  * search(str정규표현식) : 위치확인 (없으면 -1)
+  * match(str정규표현식) : 해당 값 반환
+  * test(str정규표현식) : 정규표현식에 맞으면 true
+  * str정규표현식.exec(str) : 정규표현식과 일치하는 문자열 반환
+* 배열로 반환 [1, index: , input: ]
+  * str.replace(교체 대상 문자열 또는 정규식, 대체될 문자열 또는 함수)
+* 반복 가능한 객체
+* 반복 가능한 규약
+* 반복자 규약 (iterator : 반복자 규약을 충족하는 객체)
+* for-of
+  * 문자열 순환
+* next 호출 결과로 반환된 객체의 done속성이 true일때까지
+* Map
+  * 키와 값을 한 쌍. 중복키X, Key는 다양한 자료형 값 가능
+  * Object는 문자, Symbol자료형만 Key 가능
+  * Symbol.iterator가 기본적으로 정의
+  * Object는 없음
+  * get, set, has, delete, size
+  * keys, values, entries
+* for-of, foreach : Map 객체 순환
+* for(let key of map.keys())
+* for(let value of map.values())
+* for(let [key, value] of map)
+* map.forEach((value, key) => {});
+* Set
+  * 값으로만 이루어짐, 중복값허용X
+  * add, delete, has, size
+  * new Set(array);
+  * keys, values, entries
+* setTimeOut(function, 지연시간)
+* setInterval(function, 1000) 1초마다 실행
+  * 반환된 id값을통해 clearInterval(id)로 취소 가능
+* Promise
+  * 비동기 처리
+  * 객체로서 언젠가 완료될 일(계산)
+  * 대기중(Pending) : 아직 결과가 없음. 약속만 함
+  * 이행됨(Fulfilled) : 비동기 처리가 성공적으로 완료하여 약속 이행. 결과로 하나의 값 전달
+  * 거부됨(Rejected) : 비동기 처리 실패. 거절된 이유 전달
+  * then(onFulfilled, onReject) : 약속 완료시 호출될 함수 전달
+  * catch(onReject) : 약속 거부 시 호출될 함수 등록
+  * Promise 끼리의조합
+* Async
+  * 함수 안의 await구문과 함께 비동기 작업 제어
 
-문서 객체 모델 (DOM)
-HTML과 XML을 위한 프로그래밍 인터페이스
-문서의 구조, 스타일, 내용 변경 가능
-<script> 태그가 필요한 이유 : 앞의 태그들을 브라우저가 먼저 읽어야 JS코드가 해석되기전에 DOM이 만들어져 <script>태그 내 JS에서 해당 DOM에 접근 가능하므로
-노드 트리 구조로 표현 가능
-Tag의 Attribute, DOM의 Property
-.appendChild() 생성 .remove() 삭제
-.style.
-이벤트
-모든 요소는 이벤트를 발생함
-addEventListner(‘keydown’,e => {});
-이벤트 버블링
-
-
-이벤트 캡처링
-스크롤 고정하기
-window객체의 속성을 이용해 상단 차이가 커질경우 상단에 고정
-스크롤할때마다 호출되는 리스너 함수 등록
-문서 이동
-location.assign(‘’);
+* 문서 객체 모델 (DOM)
+  * HTML과 XML을 위한 프로그래밍 인터페이스
+  * 문서의 구조, 스타일, 내용 변경 가능
+* <script> 태그가 필요한 이유 : 앞의 태그들을 브라우저가 먼저 읽어야 JS코드가 해석되기전에 DOM이 만들어져 <script>태그 내 JS에서 해당 DOM에 접근 가능하므로
+* 노드 트리 구조로 표현 가능
+* Tag의 Attribute, DOM의 Property
+* .appendChild() 생성 .remove() 삭제
+* .style.
+* 이벤트
+  * 모든 요소는 이벤트를 발생함
+  * addEventListner(‘keydown’,e => {});
+  * 이벤트 버블링
+  * 이벤트 캡처링
+* 스크롤 고정하기
+  * window객체의 속성을 이용해 상단 차이가 커질경우 상단에 고정
+  * 스크롤할때마다 호출되는 리스너 함수 등록
+* 문서 이동
+  * location.assign(‘’);
 
 
+* Array 시간복잡도
+    * arr[i] O(1)
+    * arr.push(5)  O(1)
+    * arr.slice() O(n)
+    * arr.pop()  O(1)
+    * arr.includes(5)  O(n)
+* Q
+* Part
+* A
+* for, for-in, for-of, foreach 차이점
+* JS
 
-Array 시간복잡도
-arr[i] O(1)
-arr.push(5)  O(1)
-arr.slice() O(n)
-arr.pop()  O(1)
-arr.includes(5)  O(n)
-Q
-Part
-A
-for, for-in, for-of, foreach 차이점
-JS
-
-for in : 객체의 property 확인용
+* for in : 객체의 property 확인용
 
