@@ -11,18 +11,19 @@ SPA : 단일 페이지 어플리케이션
 3. 서버 렌더링 : 
 
 
-Component : 특정 코드 뭉치를 이식.재사용하기 위해 사용하는 코드 블록 단위
- 생명 주기 : 생성, 변경, 소멸 과정
- Component 생성 과정
-  render()
-   화면 내용이 변경되어야 할 시점 호출. return되는 html형식의 코드 그려줌
-  constructor(props)
-   가장 먼저, 처음 한 번만 호출, state선언, props초기화 (super(props))
-getDerivedStateFormProps(props, state)
-constructor() 다음으로 실행. 컴포넌트가 새로운 props를 받게 됐을 때 state를 변경해 줌
-componentDidMount()
-‘생성’중 가장 마지막으로 실행. 화면이 모두 그려진 후 실행되어야 하는 이벤트 처리, 초기화 등
-constructor -> rener -> getderivedStateFormProps -> componentDidMount
+#Component : 특정 코드 뭉치를 이식.재사용하기 위해 사용하는 코드 블록 단위
+1.생명 주기 : 생성, 변경, 소멸 과정
+##Component 생성 과정
+  1. render()
+   - 화면 내용이 변경되어야 할 시점 호출. return되는 html형식의 코드 그려줌
+  2. constructor(props)
+   - 가장 먼저, 처음 한 번만 호출, state선언, props초기화 (super(props)) 
+  3. getDerivedStateFormProps(props, state)
+   - constructor() 다음으로 실행. 컴포넌트가 새로운 props를 받게 됐을 때 state를 변경해 줌
+  4. componentDidMount()
+   - ‘생성’중 가장 마지막으로 실행. 화면이 모두 그려진 후 실행되어야 하는 이벤트 처리, 초기화 등
+* constructor -> rener -> getderivedStateFormProps -> componentDidMount
+
 Component 변경 과정
 Props나 State의 변경
 shouldComponentUpdate(props, state)
