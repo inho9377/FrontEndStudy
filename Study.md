@@ -44,99 +44,101 @@ b: 400
   * shouldcomponentupdate로 성능 조절 (업데이트 해야할때만)
   * {return true; }-> 기본
   * this.setstate를 사용
-  *const anotherArray = [...array,3];
-  *const anotherArray2 = array.concat(4);
-*불변성 : 객체가 생성된 이후 그 State를 변경할 수 없는 디자인 패턴
-  *의도치 않은 특정 객체가 변경되면 참조하고 있던 객체도 변경이 일어남. side-effect가 발생할 확률과 프로그램 복잡도가 높아짐
-  *변경이 일어난 객체의 프로퍼티만 비교함으로써 최적화 가능(shouldComponentUpdate)
-  *실제로 DOM을 제어하는 것이 아니라 가상의 DOM을 두고 관리함
-  *프레임워크들의 Model
-  *프론트엔드 라이브러리
-  *데이터가 바뀌면 그냥 뷰를 날려버리고(Mutation 하지말고) 새로 만들자
+  * const anotherArray = [...array,3];
+  * const anotherArray2 = array.concat(4);
+* 불변성 : 객체가 생성된 이후 그 State를 변경할 수 없는 디자인 패턴
+  * 의도치 않은 특정 객체가 변경되면 참조하고 있던 객체도 변경이 일어남. side-effect가 발생할 확률과 프로그램 복잡도가 높아짐
+  * 변경이 일어난 객체의 프로퍼티만 비교함으로써 최적화 가능(shouldComponentUpdate)
+  * 실제로 DOM을 제어하는 것이 아니라 가상의 DOM을 두고 관리함
+  * 프레임워크들의 Model
+  * 프론트엔드 라이브러리
+  * 데이터가 바뀌면 그냥 뷰를 날려버리고(Mutation 하지말고) 새로 만들자
 
-*Virtual DOM
-JS로 이루어진 가상의 돔. DOM과 비교하여 바뀐부분만 바꿔줌
-state를 직접 변경하면 forceUpdate() 함수를 사용해야 render가 호출됨
-함수형 컴포넌트
-render함수 없이 return만으로 화면을 그려줌
-hook -> useState(), useEffect()
-<Fragment > </>
-하나의 태그로 전체를 감싸지 않으면 에러나므로
-fetch
-GET : 데이터를 조회해 가져와 사용
-POST : 서버의 상태나 데이터를 변경하는 수행작업에 사용
-await fetch
-axios
-axios.get(http).then(function)
-post는 response에 호출결과 반환
-Promise
-then : 이행시
-catch : 거부시
-onChange
-특정 element에 변화가 생겼을 때
-onMouseMove
-특정 tag영역 안에서 마우스 커서가 움직일 때
-Ref
-element가 참조하는 변수에 접근해 변경하고 제어
-커링
-함수의 재사용성을 높이기 위해 함수 자체를 return하는 함수
-하이오더 컴포넌트
-컴포넌트를 인자로 받거나 반환하는 함수
-컨텍스트API
-데이터의 공급자, 소비자를 정의하고 데이터가 필요한 컴포넌트만 사용할 수 있게 구현 가능
-Redux
+* Virtual DOM
+  * JS로 이루어진 가상의 돔. DOM과 비교하여 바뀐부분만 바꿔줌
+  * state를 직접 변경하면 forceUpdate() 함수를 사용해야 render가 호출됨
+* 함수형 컴포넌트
+  * render함수 없이 return만으로 화면을 그려줌
+  * hook -> useState(), useEffect()
+* <Fragment > </>
+  * 하나의 태그로 전체를 감싸지 않으면 에러나므로
+* fetch
+  * GET : 데이터를 조회해 가져와 사용
+  * POST : 서버의 상태나 데이터를 변경하는 수행작업에 사용
+  * await fetch
+* axios
+  * axios.get(http).then(function)
+  * post는 response에 호출결과 반환
+* Promise
+  * then : 이행시
+  * catch : 거부시
+* onChange
+  * 특정 element에 변화가 생겼을 때
+* onMouseMove
+  * 특정 tag영역 안에서 마우스 커서가 움직일 때
+* Ref
+  * element가 참조하는 변수에 접근해 변경하고 제어
+* 커링
+  * 함수의 재사용성을 높이기 위해 함수 자체를 return하는 함수
+* 하이오더 컴포넌트
+  * 컴포넌트를 인자로 받거나 반환하는 함수
+* 컨텍스트API
+  * 데이터의 공급자, 소비자를 정의하고 데이터가 필요한 컴포넌트만 사용할 수 있게 구현 가능
+
+-------------------
+#Redux
 https://wooder2050.medium.com/%EB%A6%AC%EB%8D%95%EC%8A%A4-redux-%EB%8A%94-%EC%99%9C-%EC%93%B0%EB%8A%94-%EA%B1%B4%EB%8D%B0-2eaafce30f27
 https://react.vlpt.us/redux/01-keywords.html
-상태관련 로직들을 파일로 분리해 효율적으로 관리 가능
-action
-상태에 변화 필요시 발생. 하나의 객체로 표현
- type필드가 있어야 함.
-Action Creator
-액션 만드는 함수
-일반적으로 export하여 다른 파일에서 불러와 사용
-reducer
-변화를 일으키는 함수
-현재 상태, 전달받은 액션 참고 새로운 상태 반환
-store
-한 애플리케이션 당 하나의 스토어
-현재의 앱 상태, 리듀서, 몇 내장함수 포함
-디스패치
-스토어 내장함수 중 하나
-액션을 발생시키는 것 dispatch(action)
-subscribe
-스토어 내장함수 중 하나
-함수 형태의 값을 파라미터로 받아옴
-액션이 디스패치 되었을 때마다 전달해준 함수 호출
-보통 요거 대신 connect또는  useselector Hook을 사용해 구독함
-리덕스 3규칙
-1애플리케이션 1스토어
-상태는 읽기전용
-새로운 객체/배열 만들어 교체하는 방식
-데이터 변경 감지를 더 간단히 하기 위해서 (얕은복사-깊은복사) 불변성을 유지함
-리듀서는 순수한 함수
-이전 상태(외부 상태)는 건드리지 않고, 변화를 일으킨 새로운 상태 객체를 만들어 반환
-똑같은 파라미터로 호출된 리듀서는 언제나 똑같은 결과를 반환해야함
-const store = createStore(reducer-function)
+* 상태관련 로직들을 파일로 분리해 효율적으로 관리 가능
+* action
+  * 상태에 변화 필요시 발생. 하나의 객체로 표현
+  * type필드가 있어야 함.
+* Action Creator
+  * 액션 만드는 함수
+  * 일반적으로 export하여 다른 파일에서 불러와 사용
+* reducer
+  * 변화를 일으키는 함수
+  * 현재 상태, 전달받은 액션 참고 새로운 상태 반환
+* store
+  * 한 애플리케이션 당 하나의 스토어
+  * 현재의 앱 상태, 리듀서, 몇 내장함수 포함
+* 디스패치
+  * 스토어 내장함수 중 하나
+  * 액션을 발생시키는 것 dispatch(action)
+* subscribe
+  * 스토어 내장함수 중 하나
+  * 함수 형태의 값을 파라미터로 받아옴
+  * 액션이 디스패치 되었을 때마다 전달해준 함수 호출
+  * 보통 요거 대신 connect또는  useselector Hook을 사용해 구독함
+* 리덕스 3규칙
+  * 1애플리케이션 1스토어
+  * 상태는 읽기전용
+  * 새로운 객체/배열 만들어 교체하는 방식
+  * 데이터 변경 감지를 더 간단히 하기 위해서 (얕은복사-깊은복사) 불변성을 유지함
+  * 리듀서는 순수한 함수
+    * 이전 상태(외부 상태)는 건드리지 않고, 변화를 일으킨 새로운 상태 객체를 만들어 반환
+    * 똑같은 파라미터로 호출된 리듀서는 언제나 똑같은 결과를 반환해야함
+  * const store = createStore(reducer-function)
 
 
 
 
 
-라우팅
-호출되는 url에 따라 페이지(view)이동을 설정하는 것
+* 라우팅
+  * 호출되는 url에 따라 페이지(view)이동을 설정하는 것
 
-StateContext
-일반적으로 값을 자손에게 전달하는  방법은 하향식
-이를 해결하는 방법은 flux, reflux, redux, mobx
-ContextAPI로 트리의 모든 레벨에 값을 공유
-React.createContext(defaultValue)
-<.Provider value = {}>
-Provider의 Value는 하위 모든 Consumer에서 사용 가능
-Provider의 하위 모든 Consumer는 Provider의 value가 변경될때마다 재랜더링
-Hook의 useContext(MyContext) - Context 객체의 value 가져옴
+* StateContext
+  * 일반적으로 값을 자손에게 전달하는  방법은 하향식
+  * 이를 해결하는 방법은 flux, reflux, redux, mobx
+  * ContextAPI로 트리의 모든 레벨에 값을 공유
+* React.createContext(defaultValue)
+  * <.Provider value = {}>
+  * Provider의 Value는 하위 모든 Consumer에서 사용 가능
+  * Provider의 하위 모든 Consumer는 Provider의 value가 변경될때마다 재랜더링
+  * Hook의 useContext(MyContext) - Context 객체의 value 가져옴
 
-
-HTML
+---------------------
+#HTML
 <!doctype html> 문서 유형 선언
 블록 요소 : 줄바꿈이 기본적으로 일어남, 영역의 너비가 상위 영역의 전체 너비만큼 되는 요소
 인라인 요소 : 줄바꿈 x, 블록 요소와 반대. a, img, strong, span 등
