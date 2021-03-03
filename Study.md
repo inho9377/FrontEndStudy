@@ -3,7 +3,7 @@
 http://webberstudy.com/html-css/html-1/head-element/
 
 --------------------------------------------------
-#React
+# React
 
 SPA : 단일 페이지 어플리케이션
 1. 모든 정적리소스를 최초에 다운로드 : 초기 구동 느림
@@ -86,7 +86,7 @@ b: 400
   * 데이터의 공급자, 소비자를 정의하고 데이터가 필요한 컴포넌트만 사용할 수 있게 구현 가능
 
 -------------------
-#Redux
+# Redux
 https://wooder2050.medium.com/%EB%A6%AC%EB%8D%95%EC%8A%A4-redux-%EB%8A%94-%EC%99%9C-%EC%93%B0%EB%8A%94-%EA%B1%B4%EB%8D%B0-2eaafce30f27
 https://react.vlpt.us/redux/01-keywords.html
 * 상태관련 로직들을 파일로 분리해 효율적으로 관리 가능
@@ -138,175 +138,177 @@ https://react.vlpt.us/redux/01-keywords.html
   * Hook의 useContext(MyContext) - Context 객체의 value 가져옴
 
 ---------------------
-#HTML
-<!doctype html> 문서 유형 선언
-블록 요소 : 줄바꿈이 기본적으로 일어남, 영역의 너비가 상위 영역의 전체 너비만큼 되는 요소
-인라인 요소 : 줄바꿈 x, 블록 요소와 반대. a, img, strong, span 등
-head : 브라우저에게 정보를 주는 태그
-meta : 문자 세트를 비롯한 문서 정보
-<meta charset=”UTF-8”>
-a
-링크로 이동
-링크의 타겟 (일반적으로  ID 사용 권장)
-img
-alt 속성 : 불러들이지 못했을 때 나오는 내용
-ol
-순서가 있는 요소
-li : ol안엔 이것만 가능,  li안에는 ol 중첩 가능
-div : 의미없는 요소. 블록 요소
-span : 의미없는 요소. 인라인 요소
-class : 한 요소에 여러개 가능. css에서 선택자로 사용 (.hello)
-id : 페이지에서 딱 한번만 가능(고유값)
-주석 : <!--  →
-표준화 : 여러 규격등을 표준을 정해서 제한하고 통일하는 것
-HTML (의미) CSS (외형) JS (동작)
-열고 닫는 태그를 온전히 닫는 것
-블록 요소를 인라인 요소에 넣지 않는 것
-doctype
-가장 먼저 선언
-어떤 문서의 타입을 사용하는지 선언 (HTML, XHTML등)
-비사용 권장
-font, center - CSS로 사용할 것
-iframe : 프레임 내 다른 웹페이지 사용
-big, small
-i, b, s
-abbr
-축약어를 나타냄
-dfn
-개념(단어)의 정의
-code
-프로그래밍 소스 표현
-table
-tr : 행
-td : 셀
-colspan : 열 합침 <td colspan=”2”>참가자</td>
-rowspan : 행(세로)합침
-caption : 표의 제목
-scope : th 요소에서 사용. 어느 셀에 영향 미치는가 지정
+# HTML
+* <!doctype html> 문서 유형 선언
+* 블록 요소 : 줄바꿈이 기본적으로 일어남, 영역의 너비가 상위 영역의 전체 너비만큼 되는 요소
+* 인라인 요소 : 줄바꿈 x, 블록 요소와 반대. a, img, strong, span 등
+* head : 브라우저에게 정보를 주는 태그
+* meta : 문자 세트를 비롯한 문서 정보
+* <meta charset=”UTF-8”>
+* a
+  * 링크로 이동
+  * 링크의 타겟 (일반적으로  ID 사용 권장)
+* img
+  * alt 속성 : 불러들이지 못했을 때 나오는 내용
+* ol
+  * 순서가 있는 요소
+  * li : ol안엔 이것만 가능,  li안에는 ol 중첩 가능
+* div : 의미없는 요소. 블록 요소
+* span : 의미없는 요소. 인라인 요소
+* class : 한 요소에 여러개 가능. css에서 선택자로 사용 (.hello)
+* id : 페이지에서 딱 한번만 가능(고유값)
+* 주석 : <!--  →
+* 표준화 : 여러 규격등을 표준을 정해서 제한하고 통일하는 것
+  * HTML (의미) CSS (외형) JS (동작)
+  * 열고 닫는 태그를 온전히 닫는 것
+  * 블록 요소를 인라인 요소에 넣지 않는 것
+* doctype
+  * 가장 먼저 선언
+  * 어떤 문서의 타입을 사용하는지 선언 (HTML, XHTML등)
+* 비사용 권장
+  * font, center - CSS로 사용할 것
+  * iframe : 프레임 내 다른 웹페이지 사용
+  * big, small
+  * i, b, s
+* abbr
+  * 축약어를 나타냄
+* dfn
+  * 개념(단어)의 정의
+* code
+  * 프로그래밍 소스 표현
+* table
+  * tr : 행
+  * td : 셀
+  * colspan : 열 합침 <td colspan=”2”>참가자</td>
+  * rowspan : 행(세로)합침
+  * caption : 표의 제목
+  * scope : th 요소에서 사용. 어느 셀에 영향 미치는가 지정
 http://webberstudy.com/html-css/html-2/table-symactic/
 
 
 
 
+---------------------------------
+# CSS
+* 태그 : 태그 그 자체
+* 요소 : 태그가 적용 된 것
+* 선택자
+  * 요소 : p, h1등
+  * ID : #abc
+  * class : .abc
+  * 중첩가능 (p.box
+  * 묶음 : h1, div, p {}
+  * 후손 : .box2 .name {} (box2요소 안에 name요소 선택)
+  * 묶음 & 후손 : .box1 .name, .box2 .name
+  * 우선순위
+    * 나중 우선
+    * 후손 선택자라면 더 많은 단계로 표현된 선택자
+    * 다른 단일 선택자보다 ID가 우선
+    * 스타일이 안겹치면 그 스타일이 없어지진 않음
+  * 자식 선택자 : > (.contry > span
+  * 인접 형제 선택자 : + p+p (P요소 다음에 오는 p 요소를 선택)
+  * 일반 형제 선택자 : ~
+  * 가상 클래스 선택자
+    * :link - href 속성 갖고있는 요소 선택
+    * :visited : 링크 중 방문한 링크
+    * :hover : 호버 상태
+    * :active : 클릭 상태
 
-CSS
-태그 : 태그 그 자체
-요소 : 태그가 적용 된 것
-선택자
-요소 : p, h1등
-ID : #abc
-class : .abc
-중첩가능 (p.box
-묶음 : h1, div, p {}
-후손 : .box2 .name {} (box2요소 안에 name요소 선택)
-묶음 & 후손 : .box1 .name, .box2 .name
-우선순위
-나중 우선
-후손 선택자라면 더 많은 단계로 표현된 선택자
-다른 단일 선택자보다 ID가 우선
-스타일이 안겹치면 그 스타일이 없어지진 않음
-자식 선택자 : > (.contry > span
-인접 형제 선택자 : + p+p (P요소 다음에 오는 p 요소를 선택)
-일반 형제 선택자 : ~
-가상 클래스 선택자
-:link - href 속성 갖고있는 요소 선택
-:visited : 링크 중 방문한 링크
-:hover : 호버 상태
-:active : 클릭 상태
+* font-family : 서체
+* text-decoration : 밑줄, 취소선 등
+* 상대주소 : 현재 파일 기준 (../)
+* 절대주소
+* background-repeat : 이미지로 넣은걸 반복할건지
+    * position
+    * px : 절대값
+    * % 이미지 기준 상대값
+    * left, right : x축
+    * top, bottom : y축
+    * inherit : 부모 속성 상속받음
+    * 인라인, 블록 요소의 background 차이
 
-font-family : 서체
-text-decoration : 밑줄, 취소선 등
-상대주소 : 현재 파일 기준 (../)
-절대주소
-background-repeat : 이미지로 넣은걸 반복할건지
-position
-px : 절대값
-% 이미지 기준 상대값
-left, right : x축
-top, bottom : y축
-inherit : 부모 속성 상속받음
-인라인, 블록 요소의 background 차이
+* border(테두리)
+  * 네 가지 방향 : border-top, right, left, bottom
+  * border-top-width : 3px
+* em : 상재거인 단위. 글자 크기 기준
+* 박스모델
+  * margin : 요소와 요소와의 간격 (바깥 여백)
+  * padding : 요소 안 (내부 여백)
+  * width, height : 블록요소만 적용 가능
+* 리스트 스타일
+  * list-style-type
+* 크로스 브라우징 : 모든 브라우저에서 잘 나오게끔 하는 작업
+  * 브라우저 엔진 (레이아웃 엔진)
+  * 브라우저를 렌더링함
+  * 크로스를 위해 엔진 파악 필요
+  * 브라우저 자체적으로 CSS 스타일을 가지고 있음
+  * CSS 초기화 : 차이점을 편하게 작업
+  * { margin : 0, padding : 0}
+  * 초기화에 너무 많은 스타일x
+  * 속성의 상속을 무시하게 만들지 말 것
+* link : 공통 초기화 (스타일 시트 여러개) - 다중 스타일 시트
+* display
+  * 요소를 어떻게 보여줄지 지정하는 속성 (block, inline)
+  * display: none vs visibility: hidden
+  * 후자는 해당 영역을 남겨놓음(빈공간)
+* overflow
+  * 컨텐츠가 넘칠때
+* float
+  * http://webberstudy.com/html-css/css-2/float-layout/
+  * 이미지 등 요소를 띄워서 왼쪽이나 오른쪽에 배치
+  * 스타일을 준 요소의 상위 요소가 해당 요소를 온전히 감쌀수 있도록
+* clear
+  * 이미지 아래에서 새로운 섹션 시작
 
-border(테두리)
-네 가지 방향 : border-top, right, left, bottom
-border-top-width : 3px
-em : 상재거인 단위. 글자 크기 기준
-박스모델
-margin : 요소와 요소와의 간격 (바깥 여백)
-padding : 요소 안 (내부 여백)
-width, height : 블록요소만 적용 가능
-리스트 스타일
-list-style-type
-크로스 브라우징 : 모든 브라우저에서 잘 나오게끔 하는 작업
-브라우저 엔진 (레이아웃 엔진)
-브라우저를 렌더링함
-크로스를 위해 엔진 파악 필요
-브라우저 자체적으로 CSS 스타일을 가지고 있음
-CSS 초기화 : 차이점을 편하게 작업
-* { margin : 0, padding : 0}
-초기화에 너무 많은 스타일x
-속성의 상속을 무시하게 만들지 말 것
-link : 공통 초기화 (스타일 시트 여러개) - 다중 스타일 시트
-display
-요소를 어떻게 보여줄지 지정하는 속성 (block, inline)
-display: none vs visibility: hidden
-후자는 해당 영역을 남겨놓음(빈공간)
-overflow
-컨텐츠가 넘칠때
-float
-http://webberstudy.com/html-css/css-2/float-layout/
-이미지 등 요소를 띄워서 왼쪽이나 오른쪽에 배치
-스타일을 준 요소의 상위 요소가 해당 요소를 온전히 감쌀수 있도록
-clear
-이미지 아래에서 새로운 섹션 시작
+---------------------------------
+
+# 자바 스크립트
+* var, let, const
+  * var : 재선언, 재할당 가능
+  * let : 재할당 가능
+  * const : 둘 다 불가
+* … (전개 연산자)
+* map vs. foreach : map은 기존배열 건드리지 않고 반환
+  * Map_arr.map(x=>x*2)
 
 
-자바 스크립트
-var, let, const
-var : 재선언, 재할당 가능
-let : 재할당 가능
-const : 둘 다 불가
-… (전개 연산자)
-map vs. foreach : map은 기존배열 건드리지 않고 반환
-Map_arr.map(x=>x*2)
+* 변수 : 값을 넣어놓는 공간
+* 자료형
+  * 원시 타입
+    * 숫자형(Infinity - 가장 큰 수, NaN - 너무 큰 값, 유효하지 않은 값), 문자형, 불린형, 심볼형, null(비어있는 값), undefined(변수 정의, 아무 값도 할당받지 않은 상태)
+  * 참조 타입
+    * 객체 (속성들의 집합) 순서도 크기도 고정되어있지 않음
+    * 값의 메모리 주소를 변수에 할당하여 값을 참조함
+* for-in
+  * for (var item in store)
+* 객체
+  * 값들을 그룹으로 묶은 데이터 모음
+  * 키와 값 한쌍 -> 속성(Property)
+  * 1Key 1Value
+  * JSOn과 유사한 구조
+* 단축 속성명
+  * var family = {address, members, addFamily, getHeadcount};
+  * 비구조화할당 : 배열이나 객체의 값을 새로운 변수에 할당
+* 심볼형
+  * Symbol(‘key’) -> 늘 고유한 값 반환
 
+* 예외 처리
+  * throw -> try-catch-finally 실행 블록 빠져나감
+  * arguments: (전달인자) : 함수가 호출될 때 전달되는 값, 매개변수 : 함수 선언 시 작성되는 변수
+* 나머지 매개변수
+  * function(parameter, ...restParameter) {}
+* 스코프
+  * 변수와 매개변수가 어디까지 유효한지
+  * 렉시컬 스코프 : JS. 코드 작성 시점에 스코프 결정
+* 함수 호이스팅
+  * 해석-실행 으로 나눔. 해석 단계에서 선언 문장 초기화&스코프 형성 -> 실행 단계에서 값을 할당, 계산
+  * 함수를 선언하기 전에 호출 가능
 
-변수 : 값을 넣어놓는 공간
-자료형
-원시 타입
-숫자형(Infinity - 가장 큰 수, NaN - 너무 큰 값, 유효하지 않은 값), 문자형, 불린형, 심볼형, null(비어있는 값), undefined(변수 정의, 아무 값도 할당받지 않은 상태)
-참조 타입
-객체 (속성들의 집합) 순서도 크기도 고정되어있지 않음
-값의 메모리 주소를 변수에 할당하여 값을 참조함
-for-in
-fr (var item in store)
-객체
-값들을 그룹으로 묶은 데이터 모음
-키와 값 한쌍 -> 속성(Property)
-1Key 1Value
-JSOn과 유사한 구조
-단축 속성명
-var family = {address, members, addFamily, getHeadcount};
-비구조화할당 : 배열이나 객체의 값을 새로운 변수에 할당
-심볼형
-Symbol(‘key’) -> 늘 고유한 값 반환
-
-예외 처리
-throw -> try-catch-finally 실행 블록 빠져나감
-arguments: (전달인자) : 함수가 호출될 때 전달되는 값, 매개변수 : 함수 선언 시 작성되는 변수
-나머지 매개변수
-function(parameter, ...restParameter) {}
-스코프
-변수와 매개변수가 어디까지 유효한지
-렉시컬 스코프 : JS. 코드 작성 시점에 스코프 결정
-함수 호이스팅
-해석-실행 으로 나눔. 해석 단계에서 선언 문장 초기화&스코프 형성 -> 실행 단계에서 값을 할당, 계산
-함수를 선언하기 전에 호출 가능
-
-스코프 체인
-실행 컨텍스트 : 코드가 실행되기 위해 필요한 정보 가지고 있음
-Stack 이용
-렉시컬 환경
+* 스코프 체인
+  * 실행 컨텍스트 : 코드가 실행되기 위해 필요한 정보 가지고 있음
+  * Stack 이용
+  * 렉시컬 환경
+```
 ExcutionContext = {
 LexicalEnvironment: {
 EnvironmentRecord: {
@@ -314,48 +316,52 @@ EnvironmentRecord: {
 OuterLexicalEnvironment: 참조 -> 각 실행 컨텍스트가 체인처럼 연결
 }
 }
-클로저
-함수가 정의될 때의 렉시컬 환경을 기억하는 함수
-const counter1 = createCounterClosure();
-속성 기술자
-자기 자신에 대한 정보를 담고 있음
-JS의 모든 객체 속성이 가지고 있음
+```
+
+* 클로저
+  * 함수가 정의될 때의 렉시컬 환경을 기억하는 함수
+  * const counter1 = createCounterClosure();
+* 속성 기술자
+  * 자기 자신에 대한 정보를 담고 있음
+  * JS의 모든 객체 속성이 가지고 있음
+```
 let user = {};
 Object.getOwnPropertyDescriptor
 Object.defineProperty(user, “age”, {
 get : function() {return this._age},
 set : function (age) {;;;;}
 enumerable: true
-get set을 통해 속성접근 관리 가능
-객체지향 프로그래밍
-프로그램들을 객체들로 구성하고 객체들 간에 서로 상호작용하도록 작성하는 방법
-객체는 특징적인 행동(메소드)과 변경 가능한 상태(외 다른값)를 가짐
-classification : 타입을 정의하는 작업
-Prototype : 모든 객체는 다른 객체의 원형이 될 수 있음 (__proto__설정)
+```
+* get set을 통해 속성접근 관리 가능
+* 객체지향 프로그래밍
+  * 프로그램들을 객체들로 구성하고 객체들 간에 서로 상호작용하도록 작성하는 방법
+  * 객체는 특징적인 행동(메소드)과 변경 가능한 상태(외 다른값)를 가짐
+* classification : 타입을 정의하는 작업
+* Prototype : 모든 객체는 다른 객체의 원형이 될 수 있음 (__proto__설정)
 
-생성자 함수
-function Teacer(name, age, subject) { this.name=name;;;;}
-class
-상속 : extends
-static 정적 메소드
+* 생성자 함수
+  * function Teacer(name, age, subject) { this.name=name;;;;}
+* class
+  * 상속 : extends
+* static 정적 메소드
 
 
-this
-생성자 : 클래스 내부 가리킴
-객체 안 메소드 : 객체
-일반 함수 : 전역 객체
-람다 함수 : 부모 환경. bind를 통해 변경 불가
-모듈
-코드의 묶음 단위. 애플리케이션 하나의 구성요소
-import : 모듈 가져오기
-export :  모듈 내보내기
-런타임 로딩 : 의존관계가 형성된 모듈들을 애플 구동 시점에 HTTP 요청으로 불러오고 실행함
-번들링 : 의존 관계가 형성된 모듈들을 하나의 파일로 묶어줌
-default : 모듈 기본값. 한 파일에서 하나의 값만 정의가능
-export default class Hello {}
-as
-import * as add from ‘./add.js’
-다른 모듈에서 가져온 값들은 얕은 복사. 
+* this
+  * 생성자 : 클래스 내부 가리킴
+  * 객체 안 메소드 : 객체
+  * 일반 함수 : 전역 객체
+  * 람다 함수 : 부모 환경. bind를 통해 변경 불가
+* 모듈
+  * 코드의 묶음 단위. 애플리케이션 하나의 구성요소
+  * import : 모듈 가져오기
+  * export :  모듈 내보내기
+  * 런타임 로딩 : 의존관계가 형성된 모듈들을 애플 구동 시점에 HTTP 요청으로 불러오고 실행함
+  * 번들링 : 의존 관계가 형성된 모듈들을 하나의 파일로 묶어줌
+  * default : 모듈 기본값. 한 파일에서 하나의 값만 정의가능
+  * export default class Hello {}
+* as
+  * import * as add from ‘./add.js’
+  * 다른 모듈에서 가져온 값들은 얕은 복사. 
 
 표준 내장 객체
 전역 스코프 안에 객체 참조
@@ -526,112 +532,4 @@ for, for-in, for-of, foreach 차이점
 JS
 
 for in : 객체의 property 확인용
-
-
-
-
-React
-
-
-
-
-HCS
-
-
-
-
-Etc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
