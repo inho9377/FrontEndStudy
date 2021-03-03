@@ -2,7 +2,7 @@
 
 http://webberstudy.com/html-css/html-1/head-element/
 
-
+--------------------------------------------------
 #React
 
 SPA : 단일 페이지 어플리케이션
@@ -24,36 +24,37 @@ SPA : 단일 페이지 어플리케이션
    - ‘생성’중 가장 마지막으로 실행. 화면이 모두 그려진 후 실행되어야 하는 이벤트 처리, 초기화 등
 * constructor -> rener -> getderivedStateFormProps -> componentDidMount
 
-+Component 변경 과정
-++Props나 State의 변경
-++shouldComponentUpdate(props, state)
-+jquery
-++var($‘inputId’).val();
-++render의 return함수 내 html코드에서 inputId의 id에 해당하는 태그의 VALUE값 참조
+*Component 변경 과정
+  *Props나 State의 변경
+  *shouldComponentUpdate(props, state)
+*jquery
+  *var($‘inputId’).val();
+  *render의 return함수 내 html코드에서 inputId의 id에 해당하는 태그의 VALUE값 참조
 
-+props
-++부모 컴포넌트가 자식 컴포넌트에 데이터를 전달할 때 사용
-++자식 컴포넌트에선 데이터 수정 불가 (state에 넣어서 변경해야함)
-```className.defaultProps = {
+*props
+  *부모 컴포넌트가 자식 컴포넌트에 데이터를 전달할 때 사용
+  *자식 컴포넌트에선 데이터 수정 불가 (state에 넣어서 변경해야함)
+```
+className.defaultProps = {
 a : ‘a’,
 b: 400
-}```
+}
+```
+*state값을 update할때 불변성을 유지해야하는 이유
+  *shouldcomponentupdate로 성능 조절 (업데이트 해야할때만)
+  *{return true; }-> 기본
+  *this.setstate를 사용
+  *const anotherArray = [...array,3];
+  *const anotherArray2 = array.concat(4);
+*불변성 : 객체가 생성된 이후 그 State를 변경할 수 없는 디자인 패턴
+  *의도치 않은 특정 객체가 변경되면 참조하고 있던 객체도 변경이 일어남. side-effect가 발생할 확률과 프로그램 복잡도가 높아짐
+  *변경이 일어난 객체의 프로퍼티만 비교함으로써 최적화 가능(shouldComponentUpdate)
+  *실제로 DOM을 제어하는 것이 아니라 가상의 DOM을 두고 관리함
+  *프레임워크들의 Model
+  *프론트엔드 라이브러리
+  *데이터가 바뀌면 그냥 뷰를 날려버리고(Mutation 하지말고) 새로 만들자
 
-+state값을 update할때 불변성을 유지해야하는 이유
-++shouldcomponentupdate로 성능 조절 (업데이트 해야할때만)
-++{return true; }-> 기본
-++this.setstate를 사용
-++const anotherArray = [...array,3];
-++const anotherArray2 = array.concat(4);
-++불변성 : 객체가 생성된 이후 그 State를 변경할 수 없는 디자인 패턴
-++의도치 않은 특정 객체가 변경되면 참조하고 있던 객체도 변경이 일어남. side-effect가 발생할 확률과 프로그램 복잡도가 높아짐
-++변경이 일어난 객체의 프로퍼티만 비교함으로써 최적화 가능(shouldComponentUpdate)
-++실제로 DOM을 제어하는 것이 아니라 가상의 DOM을 두고 관리함
-++프레임워크들의 Model
-++프론트엔드 라이브러리
-++데이터가 바뀌면 그냥 뷰를 날려버리고(Mutation 하지말고) 새로 만들자
-
-+Virtual DOM
+*Virtual DOM
 JS로 이루어진 가상의 돔. DOM과 비교하여 바뀐부분만 바꿔줌
 state를 직접 변경하면 forceUpdate() 함수를 사용해야 render가 호출됨
 함수형 컴포넌트
