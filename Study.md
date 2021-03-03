@@ -3,18 +3,21 @@
 http://webberstudy.com/html-css/html-1/head-element/
 
 
-React
+#React
+
 SPA : 단일 페이지 어플리케이션
-모든 정적리소스를 최초에 다운로드 : 초기 구동 느림
-트래픽 감소, 속도, 사용성, 반응성 향상
-서버 렌더링 : 
+1. 모든 정적리소스를 최초에 다운로드 : 초기 구동 느림
+2. 트래픽 감소, 속도, 사용성, 반응성 향상
+3. 서버 렌더링 : 
+
+
 Component : 특정 코드 뭉치를 이식.재사용하기 위해 사용하는 코드 블록 단위
-생명 주기 : 생성, 변경, 소멸 과정
-Component 생성 과정
-render()
-화면 내용이 변경되어야 할 시점 호출. return되는 html형식의 코드 그려줌
-constructor(props)
-가장 먼저, 처음 한 번만 호출, state선언, props초기화 (super(props))
+ 생명 주기 : 생성, 변경, 소멸 과정
+ Component 생성 과정
+  render()
+   화면 내용이 변경되어야 할 시점 호출. return되는 html형식의 코드 그려줌
+  constructor(props)
+   가장 먼저, 처음 한 번만 호출, state선언, props초기화 (super(props))
 getDerivedStateFormProps(props, state)
 constructor() 다음으로 실행. 컴포넌트가 새로운 props를 받게 됐을 때 state를 변경해 줌
 componentDidMount()
