@@ -530,4 +530,33 @@ enumerable: true
 * JS
 
 * for in : 객체의 property 확인용
+* for of : 배열 값 순환
 
+* for와 for in 은 반복변수의 index를 리턴
+* forEach와 for of는 해당 값을 리턴
+
+```
+const array = ['가','나','다','라'];
+console.log("size : "+array.length);
+const size = array.length;
+//객체의 반복 in, 배열 of
+console.log("basic");
+for(let i=0; i<size; i++){
+  console.log(array[i]);
+}
+ 
+console.log('forEach');
+array.forEach(function(j){
+  console.log(j);
+});
+ 
+console.log('for of');
+for (let k of array){
+  console.log(k);
+}
+ 
+console.log('for in');
+for (let z in array){
+  console.log(array[z]);
+}
+```
