@@ -547,6 +547,9 @@ enumerable: true
 * for와 for in 은 반복변수의 index를 리턴
 * forEach와 for of는 해당 값을 리턴
 
+
+* 브라우저의 동작 원리
+  1. 무엇을 그릴지 : 
 ```
 const array = ['가','나','다','라'];
 console.log("size : "+array.length);
