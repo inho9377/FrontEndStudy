@@ -322,6 +322,25 @@ OuterLexicalEnvironment: 참조 -> 각 실행 컨텍스트가 체인처럼 연�
 * 클로저
   * 함수가 정의될 때의 렉시컬 환경을 기억하는 함수
   * const counter1 = createCounterClosure();
+  * 두 개의 함수로 만들어진 환경으로 이루어진 특별한 객체
+    * 여기서 환경이란 클로저가 생성될 때 그 범위에 있던 지역변수들이 포함된 context
+  * 클로저의 조건
+  *   1. 내부 함수가 익명함수로 되어 외부 함수의 반환값으로 사용
+  *   2. 내부 함수는 외부 함수의 실행 환경에서 실행됨
+  *   3. 내부 함수에서 사용되는 변수 x는 외부 함수의 변수 스코프에 있음
+  ```
+  var name = `Warning`;
+function outer() {
+  var name = `closure`;
+  return function inner() {
+    console.log(name);
+  };
+}
+
+var callFunc = outer();
+callFunc();
+// console> closure
+  ```
 * 속성 기술자
   * 자기 자신에 대한 정보를 담고 있음
   * JS의 모든 객체 속성이 가지고 있음
