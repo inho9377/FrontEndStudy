@@ -348,10 +348,15 @@ enumerable: true
 
 
 * this
-  * 생성자 : 클래스 내부 가리킴
-  * 객체 안 메소드 : 객체
+  * 생성자 : 객체 내부 가리킴 (객체 자신이 됨)
+  * 객체 안 메소드 : 객체 자신 (해당 메서드를 호출한 객체로 바인딩)
   * 일반 함수 : 전역 객체
-  * 람다 함수 : 부모 환경. bind를 통해 변경 불가
+  * 람다 함수 : 부모 환경. bind를 통해 변경 불가 (상위 스코프)
+  * bind : var func2 = function(val1, val2) {}.bind(this, 'param1', 'param2')
+  * call : func2.call(this, 'param1', 'param2')
+  * apply : func2.apply(this, ['param1', 'param2'])
+    * bind는 선언시, clall과 apply는 함수 호출시 this와 파라미터를 지정
+    * apply는 첫번째 인자로 this, 두번째 인자로 넘겨주는 파라미터를 배열로 전달
 * 모듈
   * 코드의 묶음 단위. 애플리케이션 하나의 구성요소
   * import : 모듈 가져오기
@@ -491,12 +496,19 @@ enumerable: true
   * 대기중(Pending) : 아직 결과가 없음. 약속만 함
   * 이행됨(Fulfilled) : 비동기 처리가 성공적으로 완료하여 약속 이행. 결과로 하나의 값 전달
   * 거부됨(Rejected) : 비동기 처리 실패. 거절된 이유 전달
+  * settled : 일단 결론이 난 상태 (약속이 지켜졌든 아니든)
   * then(onFulfilled, onReject) : 약속 완료시 호출될 함수 전달
   * catch(onReject) : 약속 거부 시 호출될 함수 등록
   * Promise 끼리의조합
+  * Promise.catch(function) 비동기 작업이 중간에 에러 날 때
+  * Promise.all : 여러 비동기 작업이 모두 완료되었을 때 작업 진행
+  * var promise = function(param) {return new Promise(function)과  var promise = new Promise(function)의 차이
+    * 후자는 즉시 실행
+    * 후자는 여러번 호출되어도 한번 이미 실행되었으므로 동일하게 Reject혹은 fulfill이 수행됨
+
 * Async
   * 함수 안의 await구문과 함께 비동기 작업 제어
-
+  * 
 * 문서 객체 모델 (DOM)
   * HTML과 XML을 위한 프로그래밍 인터페이스
   * 문서의 구조, 스타일, 내용 변경 가능
