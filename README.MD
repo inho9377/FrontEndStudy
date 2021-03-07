@@ -658,4 +658,10 @@ for (let z in array){
     *   plugins : 기능 확장
     *   mode : 각 환경에 맞게 일치 (개발/배포)
     *   Brower Compatibility
-    *   
+
+
+* CORS : 교차 출처 리소스 공유
+  * 추가 HTTP 헤더를 사용하여 한 출처에서 실행중이 어플이 다른 출처의 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제
+  * drawImage(), webGL, 웹 폰트 사용 등에서 사용할 수 있음
+  * 
+
